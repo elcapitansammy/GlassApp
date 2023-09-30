@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:foregroundTint="#FDFBFB"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/RandomMap"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginEnd="60dp"
+        android:text="Generate Random Map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/AddMap"
+        style="@android:style/Widget.Holo.Button.Inset"
+        android:layout_width="65dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#147BD1"
+        android:onClick="onbtnPlus_Clicked"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconTint="#32C807"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/LoadMap"
+        style="@android:style/Widget.Holo.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="onbtnLoad_Clicked"
+        android:text="@string/load_map"
+        app:iconTint="#32C807"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

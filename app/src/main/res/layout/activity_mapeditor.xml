@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mapeditor">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/name"
+        android:layout_width="170dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="64dp"
+        android:hint="Map Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/setlocation"
+        android:layout_width="63dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Exit_Clicked"
+        app:layout_constraintBottom_toBottomOf="@+id/teletransport"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/teletransport"
+        app:layout_constraintTop_toTopOf="@+id/teletransport"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/win" />
+
+    <ImageButton
+        android:id="@+id/Button"
+        android:layout_width="68dp"
+        android:layout_height="73dp"
+        android:onClick="Button_Clicked"
+        app:layout_constraintBottom_toBottomOf="@+id/setlocation"
+        app:layout_constraintEnd_toStartOf="@+id/teletransport"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Invisible"
+        app:layout_constraintTop_toTopOf="@+id/setlocation"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/buttont"
+        tools:srcCompat="@drawable/butotn" />
+
+    <ImageButton
+        android:id="@+id/Invisible"
+        android:layout_width="73dp"
+        android:layout_height="75dp"
+        android:onClick="Invisible_Clicked"
+        app:layout_constraintBottom_toBottomOf="@+id/Button"
+        app:layout_constraintEnd_toStartOf="@+id/Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/NormalBlock"
+        app:layout_constraintTop_toTopOf="@+id/Button"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/invisiblee" />
+
+    <ImageButton
+        android:id="@+id/NormalBlock"
+        android:layout_width="65dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="NormalBlock_Clicked"
+        app:layout_constraintBottom_toBottomOf="@+id/Invisible"
+        app:layout_constraintEnd_toStartOf="@+id/Invisible"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Invisible"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/coblestor" />
+
+    <ImageButton
+        android:id="@+id/teletransport"
+        android:layout_width="72dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Teletransport_Clicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/setlocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971"
+        app:srcCompat="@drawable/teletransport2" />
+
+    <ImageButton
+        android:id="@+id/quit"
+        android:layout_width="60dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onquit_Clicked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <Button
+        android:id="@+id/Play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="Play_Clicked"
+        android:text="Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="Submit_Clicked"
+        app:icon="@android:drawable/stat_sys_download"
+        app:layout_constraintEnd_toStartOf="@+id/Play"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="Remove_Clicked"
+        app:layout_constraintBottom_toTopOf="@+id/setlocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <GridLayout
+        android:id="@+id/board"
+        android:layout_width="396dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/white"
+        android:columnCount="9"
+        android:rowCount="12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quit">
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="331dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="Normal"
+        app:layout_constraintBottom_toTopOf="@+id/NormalBlock"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="76dp"
+        android:text="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/Invisible"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="4dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/Button"
+        app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="Teletransport"
+        app:layout_constraintBottom_toTopOf="@+id/setlocation"
+        app:layout_constraintStart_toEndOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="6dp"
+        android:text="exit"
+        app:layout_constraintBottom_toTopOf="@+id/setlocation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="176dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:text="*Only one exit can be added"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

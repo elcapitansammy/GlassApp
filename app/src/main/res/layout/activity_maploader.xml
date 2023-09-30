@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bb6b">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:rowCount="5"
+        android:columnCount="2">
+
+
+        <Button
+            android:id="@+id/map_id_1"
+            android:layout_columnWeight="1"
+            android:layout_height="100sp"
+            android:textSize="16sp"
+            android:layout_margin="5sp"
+            android:text="MAP 1" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
